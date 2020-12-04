@@ -1,0 +1,115 @@
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+input {
+  border: 2px solid #e491d6;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.code-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  width: 150px;
+  align-self: center;
+  border: 3px solid #e491d6;
+  height: 50px;
+  border-radius: 10px;
+}
+
+table {
+  width: 50%;
+  align-self: center;
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td:first-child {
+  background-color: #e491d6;
+  color: white;
+}
+
+.custom-input {
+  height: 25px;
+  border-radius: 10px;
+}
+
+.custom-input:focus {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  outline: #ffc0cb auto 1px !important;
+  border-radius: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 30px;
+
+  input {
+    margin-left: 10px;
+  }
+
+  button {
+    float: right;
+    margin-left: auto;
+  }
+
+  #payment {
+    width: 300px;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.custom-button {
+  color: #ffffff;
+  background-color: #e491d6;
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  justify-content: space-around;
+  height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.custom-button:focus {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  outline: #ffc0cb auto 1px !important;
+  margin-left: auto;
+  border-radius: 10px;
+}
+
+.custom-button:disabled {
+  background-color: #e4d6e4;
+}
+
+.input-group {
+  margin-right: 50px;
+}

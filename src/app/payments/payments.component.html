@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="code-container">
+    Your code:
+    {{ code | codePipe }}
+  </div>
+
+  <div class="input-container">
+    <form [formGroup]="paymentForm" (ngSubmit)="addPayment()">
+      <div class="input-group">
+        <label for="payment">Payment</label>
+        <input
+          id="payment"
+          class="custom-input"
+          name="payment"
+          type="text"
+          formControlName="payment"
+          placeholder="Payment"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="amount">Amount</label>
+        <input
+          id="amount"
+          class="custom-input"
+          type="number"
+          name="amount"
+          formControlName="amount"
+          placeholder="Amount"
+          required
+        />
+      </div>
+      <button
+        class="custom-button"
+        type="submit"
+        [disabled]="paymentForm.invalid"
+      >
+        <span class="material-icons">add</span>Add a new payment
+      </button>
+    </form>
+  </div>
+
+  <table *ngIf="payments.length">
+    <thead>
+    <tr>
+      <th>Payment</th>
+      <th>Amount</th>
+      <th>Code</th>
+      <th>Grid</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let payData of payments">
+      <td>{{ payData.payment }}</td>
+      <td>{{ payData.amount }}</td>
+      <td>{{ payData.code }}</td>
+      <td>{{ payData.gridData.length * payData.gridData[0].length }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

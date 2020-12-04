@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="code-container">
+    Your code:
+    {{ code | codePipe }}
+  </div>
+  <div class="input-container">
+    <label for="character">Do you have any preferred letter? </label>
+    <input
+      appDisableInput
+      [(ngModel)]="character"
+      type="text"
+      id="character"
+      maxlength="1"
+      name="character"
+      class="custom-input"
+      placeholder="Letter of your choice"
+    />
+    <button class="custom-button" type="button" (click)="generateGrid()">
+      <span class="material-icons">post_add</span>Generate a new Grid!
+    </button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th *ngFor="let g of grid; let i = index">
+          {{ i }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let g of grid; let i = index">
+        <td>{{ i }}</td>
+        <td *ngFor="let character of g">{{ character }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
