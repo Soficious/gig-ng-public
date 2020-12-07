@@ -8,7 +8,8 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "github:build":"ng build --prod --output-path docs --base-href /gig-ng-public/"
   },
   "private": false,
   "jest": {
