@@ -6,8 +6,8 @@ enabled = true
 
   [analyzers.meta]
   environment = [
-    "jest",
-    "browser"
+    "browser",
+    "jest"
   ]
   plugins = ["angular"]
   style_guide = "standard"
